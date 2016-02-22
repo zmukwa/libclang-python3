@@ -20,6 +20,4 @@ RUN apt-get update \
 COPY . /llvm/tools/clang/bindings/python/
 WORKDIR /llvm/tools/clang/bindings/python
 
-RUN python3 setup.py install
-
-CMD ["nosetests", "-v"]
+CMD ["nosetests", "--verbosity=20", "--debug=DEBUG"]
